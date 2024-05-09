@@ -14,9 +14,12 @@ Case Study website: https://ibayaq.kedah.gov.my/
 4 orange flags, 4 yellow flags, 5 blue flags
 
 ### Alert no 1: CSP
+
 Risk level: Medium
+
 Confidence: High
-###Identification:
+
+### Identification:
 -  CSP: Wildcard Directive
 -  CSP: script-src unsafe-eval
 -  CSP: script-src unsafe-inline
