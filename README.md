@@ -10,7 +10,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##**Automated scan:**
+## **Automated scan:**
 4 orange flags, 4 yellow flags, 5 blue flags
 
 ### Alert no 1: CSP
