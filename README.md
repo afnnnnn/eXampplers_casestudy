@@ -13,7 +13,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 ## **Automated scan:**
 4 orange flags, 4 yellow flags, 5 blue flags
 
-### Alert no 1: CSP
+### **Alert no 1: CSP**
 
 Risk level: Medium
 
@@ -45,7 +45,7 @@ Confidence: High
 Ensure that the web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
 
 
-### Alert no 2
+### **Alert no 2**
 
 Risk level: Low
 
@@ -74,7 +74,7 @@ Confidence: Medium
   -  Cross-Domain JavaScript Source File Inclusion: Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.
 
 
-### Alert no 3
+### **Alert no 3**
 
 Risk level: Low
 
@@ -89,7 +89,7 @@ Confidence: low
 
 ### prevention
 - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
