@@ -1,5 +1,14 @@
 # eXampplers_casestudy
 
+
+## Table of Contents
+1. [Group Members]
+2. [Task Distribution]
+3. [Brief Description]
+4. [Automated Scan]
+    - [Alert 1]
+    - [Alert 2]
+    - [Alert 3]
 Group eXampplers
 - Afnan Iman bin Azman (1920311)
 - Sharul Irfan bin Sharul Isram (1921825)
