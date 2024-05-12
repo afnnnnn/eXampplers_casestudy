@@ -6,9 +6,12 @@ Group eXampplers
 - Hazim
 
 Case Study website: https://ibayaq.kedah.gov.my/
--Description-
+
+## **Description**
 
 iBayaq is a website that aims to facilitate and speed up the payment of various type of revenue to the Kedah State Government such as land tax, housing bill collection, education loan repayments and entrepenuer loans. The aim of this case study is to identify the vulnerabilities present in the iBayaq site, evaluate them and how to prevent the vulnerabilities from happenning again.
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
