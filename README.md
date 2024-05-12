@@ -9,10 +9,16 @@
     - [Alert 1]
     - [Alert 2]
     - [Alert 3]
-Group eXampplers
+
+## **Group eXampplers**
 - Afnan Iman bin Azman (1920311)
 - Sharul Irfan bin Sharul Isram (1921825)
 - Hazim
+
+## **Task Distribution
+-Afnan
+-Sharul
+-Hazim
 
 Case Study website: https://ibayaq.kedah.gov.my/
 
