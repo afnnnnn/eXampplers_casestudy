@@ -1,37 +1,17 @@
 # eXampplers_casestudy
 
-
-## Table of Contents
-1. [Group Members]
-2. [Task Distribution]
-3. [Brief Description]
-4. [Automated Scan]
-    - [Alert 1]
-    - [Alert 2]
-    - [Alert 3]
-
-## **Group eXampplers**
+Group eXampplers
 - Afnan Iman bin Azman (1920311)
 - Sharul Irfan bin Sharul Isram (1921825)
-- Hazim
-
-## **Task Distribution**
-- Afnan
-- Sharul
-- Hazim
-
-## **Description**
-
-iBayaq is a website that aims to facilitate and speed up the payment of various type of revenue to the Kedah State Government such as land tax, housing bill collection, education loan repayments and entrepenuer loans. The aim of this case study is to identify the vulnerabilities present in the iBayaq site, evaluate them and how to prevent the vulnerabilities from happenning again.
-
+- Muhammad Hazim bin Ibrahim (2014309)
 
 Case Study website: https://ibayaq.kedah.gov.my/
 
+-Description-
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-## **Automated scan:**
+**Automated scan:**
 4 orange flags, 4 yellow flags, 5 blue flags
 
 **Manual scan:** 
@@ -40,11 +20,34 @@ Case Study website: https://ibayaq.kedah.gov.my/
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc
 
-## Automatic Scan
+## Automated Scan and manual scan
 
+**Alert: Cross-Domain JavaScript Source File Inclusion**
+- **Identify**
+  - Risk: Low
+  - Confidence: Medium
+  - CWE ID: 829
 
+ - **Evaluate**
+   - The page includes one or more script files from a third-party domain
+  
+  - **Prevent**
+    - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't 
+be controlled by end users of the application.
 
-## Manual Scan
+**Alert: Timestam disclosure - Unix**
+- **Identify**
+  - Risk: Low
+  - Confidence: low
+  - CWE ID: 200
+
+ - **Evaluate**
+   - A timestamp was disclosed by the application/web server - Unix
+  
+  - **Prevent**
+    - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
+
+## Manual Scan only
 
 **Alert: Server Leaks Version Information via "Server" HTTP Response Header Field**
 - **Identify**
@@ -60,114 +63,64 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Hash Disclosure
-
-## Automatic Scan
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# CSRF
-
-## Automatic Scan
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Secured Cookies
-
-## Automatic Scan
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # CSP
 
-## Automatic Scan
-
-
-
-## Manual Scan
-
-**Alert: **
+## Automated Scan and Manual Scan
+**Alert: CSP: Wildcard Directive**
 - **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
 
  - **Evaluate**
-   - 
+   - Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate 
+     certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data
+     injection attacks. These attacks are used for everything from data theft to site defacement
+     or distribution of malware. CSP provides a set of standard HTTP headers that allow website
+     owners to declare approved sources of content that browsers should be allowed to load on
+     that page — covered types are JavaScript, CSS, HTML frames, fonts, images and
+     embeddable objects such as Java applets, ActiveX, audio and video files.
   
   - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# JS Library
-
-## Automatic Scan
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to
+      set the Content-Security-Policy header.
 
 
-
-## Manual Scan
-
-**Alert: **
+  **Alert: CSP: script-src unsafe-eval**
 - **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
 
  - **Evaluate**
-   - 
+   - that scripts can be executed with the ability to use eval() and similar dynamic code execution functions.
   
   - **Prevent**
-    - 
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+   
+    **Alert: CSP: script-src unsafe-inline**
+- **Identify**
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
+
+ - **Evaluate**
+   - The unsafe-inline value in the script-src directive of a Content Security Policy (CSP) indicates that inline JavaScript code (code directly embedded within HTML) is allowed to be executed.
+  
+  - **Prevent**
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header
+   
+    **Alert: CSP: style-src unsafe-inline**
+- **Identify**
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
+
+ - **Evaluate**
+   - The unsafe-inline value in the style-src directive of a Content Security Policy (CSP) indicates that inline CSS styles (styles directly embedded within HTML) are allowed to be applied.
+  
+  - **Prevent**
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # HTTPS Implementation (TLS/SSL)
@@ -175,8 +128,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 ## Automatic Scan
 
 
-
-## Manual Scan
+## Manual Scan only
 
 **Alert: Strict-Transport-Security Header Not Set**
 - **Identify**
@@ -192,35 +144,9 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Cookie Poisoning
-
-## Automatic Scan
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Potential XXS
 
-## Automatic Scan
-
-
-
-## Manual Scan
+## Automatic Scan and Manual Scan
 
 **Alert: Cookie No HttpOnly Flag**
 - **Identify**
@@ -253,11 +179,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Information Disclosure
 
-## Automatic Scan
-
-
-
-## Manual Scan
+## Manual Scan only
 
 **Alert: Information Disclosure - Suspicious Comments**
 - **Identify**
@@ -287,3 +209,10 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## No alerts found in:
+- Cookie Poisoning
+- JS Library
+- Secured Cookies
+- CSRF
+- Hash disclosure
